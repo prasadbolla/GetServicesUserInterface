@@ -20,8 +20,7 @@ public class GetServiceInfoUIResponseMapper {
 		List<ServiceInfoUIResponse> latestNewsList = getServiceInfoResponses
 				.stream()
 				.map(serviceInfo -> new ServiceInfoUIResponse(serviceInfo
-						.getServiceId(), serviceInfo.getServiceName(),
-						serviceInfo.getServiceProviderId()))
+						.getServiceName(), serviceInfo.getStatus()))
 				.collect(Collectors.toList());
 		return latestNewsList;
 	}

@@ -26,10 +26,9 @@ public class GetServicesImpl {
 	 * @param serviceType
 	 * @return
 	 */
-	public List<ServiceInfoUIResponse> getServiceInfo(String tenentId,
-			String serviceType) {
+	public List<ServiceInfoUIResponse> getServiceInfo(String tenentId) {
 		List<GetServiceInfoResponse> getServiceInfoResponses = servicesAPIProxy
-				.getServiceInfo(tenentId, serviceType);
+				.getServiceInfo(tenentId);
 
 		return GetServiceInfoUIResponseMapper.map(getServiceInfoResponses);
 	}

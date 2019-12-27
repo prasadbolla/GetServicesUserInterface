@@ -23,11 +23,11 @@ public class ServiceInfoUserInterfaceController {
 	@Autowired
 	private GetServicesImpl getServicesImpl;
 
-	@GetMapping(value = "/services/{tenentId}/{serviceType}")
+	@GetMapping(value = "/services/{tenentId}")
 	public ResponseEntity<List<ServiceInfoUIResponse>> getServiceInfo(
-			@PathVariable String tenentId, @PathVariable String serviceType) {
+			@PathVariable String tenentId) {
 		List<ServiceInfoUIResponse> infoUIResponse = getServicesImpl
-				.getServiceInfo(tenentId, serviceType);
+				.getServiceInfo(tenentId);
 		return ResponseEntity.ok(infoUIResponse);
 	}
 }

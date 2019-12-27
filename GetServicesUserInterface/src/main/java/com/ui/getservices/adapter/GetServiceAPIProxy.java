@@ -17,10 +17,10 @@ import com.ui.getservices.service.GetServiceInfoResponse;
 //@FeignClient(name="ExtGetServiceInfoAPI")
 //@FeignClient(name="netflix-zuul-api-gateway-server")
 //@RibbonClient(name="getServiceInfo")
-@FeignClient(name="ExtGetServiceInfoAPI", url="http://52.228.103.150:80")
+@FeignClient(name="ExtGetServiceInfoAPI", url="http://52.228.100.40:80")
 @Component
 public interface GetServiceAPIProxy {
-	@GetMapping("/ext-getServiceInfo/services/{tenentId}/{serviceType}")
-	public List<GetServiceInfoResponse> getServiceInfo(@PathVariable("tenentId") String tenentId, @PathVariable("serviceType") String serviceType);
+	@GetMapping("/ext-getServiceInfo/services/{tenentId}")
+	public List<GetServiceInfoResponse> getServiceInfo(@PathVariable("tenentId") String tenentId);
 
 }
