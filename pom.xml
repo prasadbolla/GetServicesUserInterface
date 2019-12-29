@@ -15,7 +15,7 @@
 	<description>Web API for GetServices</description>
 
 	<properties>
-		<docker.image.prefix>apiservicesacr.azurecr.io</docker.image.prefix>
+		<docker.image.prefix>azureapiservicecontainerregistory.azurecr.io</docker.image.prefix>
 		<jib-maven-plugin.version>1.7.0</jib-maven-plugin.version>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>

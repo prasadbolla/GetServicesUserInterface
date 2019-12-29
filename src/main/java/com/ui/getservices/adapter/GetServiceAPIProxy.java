@@ -15,7 +15,7 @@ import com.ui.getservices.service.GetServiceInfoResponse;
 //@FeignClient(name="ExtGetServiceInfoAPI")
 //@FeignClient(name="netflix-zuul-api-gateway-server")
 //@RibbonClient(name="getServiceInfo")
-@FeignClient(name="ExtGetServiceInfoAPI", url="http://localhost:8080")
+@FeignClient(name="ExtGetServiceInfoAPI", url="http://52.228.104.23:80")
 @Component
 public interface GetServiceAPIProxy {
 	@GetMapping("/ext-getServiceInfo/services/{tenentId}")
