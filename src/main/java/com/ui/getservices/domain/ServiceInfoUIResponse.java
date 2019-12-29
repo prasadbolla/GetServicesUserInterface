@@ -3,83 +3,41 @@
  */
 package com.ui.getservices.domain;
 
+import java.util.List;
+
+import com.ui.getservices.service.Category;
+
 /**
  * @author PRASADBolla
  *
  */
 public class ServiceInfoUIResponse {
-//public String serviceId;
-public String serviceName;
-/**
- * @param serviceName
- * @param status
- */
-public ServiceInfoUIResponse(String serviceName, String status) {
-	super();
-	this.serviceName = serviceName;
-	this.status = status;
+public List<Category> categories;
+
+public ServiceInfoUIResponse(List<Category> categories) {
+	this.categories=categories;
 }
-public String status; 
+
 /**
- * @return the status
+ * @return the categories
  */
-public String getStatus() {
-	return status;
+public List<Category> getCategories() {
+	return categories;
 }
-/**
- * @param status the status to set
- */
-public void setStatus(String status) {
-	this.status = status;
-}
-/**
- * @return the serviceId
- */
-/*public String getServiceId() {
-	return serviceId;
-}*/
+
 /**
  * 
  */
 public ServiceInfoUIResponse() {
 	super();
+	// TODO Auto-generated constructor stub
 }
+
 /**
- * @param serviceId
- * @param serviceName
- * @param active
- * @param serviceProviderId
+ * @param categories the categories to set
  */
-/**
- * @param serviceId the serviceId to set
- */
-/*public void setServiceId(String serviceId) {
-	this.serviceId = serviceId;
-}*/
-/**
- * @return the serviceName
- */
-public String getServiceName() {
-	return serviceName;
+public void setCategories(List<Category> categories) {
+	this.categories = categories;
 }
-/**
- * @param serviceName the serviceName to set
- */
-public void setServiceName(String serviceName) {
-	this.serviceName = serviceName;
-}
-/**
- * @return the serviceProviderId
- *//*
-public String getServiceProviderId() {
-	return serviceProviderId;
-}
-*//**
- * @param serviceProviderId the serviceProviderId to set
- *//*
-public void setServiceProviderId(String serviceProviderId) {
-	this.serviceProviderId = serviceProviderId;
-}
-public String serviceProviderId;*/
 
 }

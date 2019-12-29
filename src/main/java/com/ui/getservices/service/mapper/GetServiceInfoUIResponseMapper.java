@@ -3,9 +3,6 @@
  */
 package com.ui.getservices.service.mapper;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 import com.ui.getservices.domain.ServiceInfoUIResponse;
 import com.ui.getservices.service.GetServiceInfoResponse;
 
@@ -14,14 +11,10 @@ import com.ui.getservices.service.GetServiceInfoResponse;
  *
  */
 public class GetServiceInfoUIResponseMapper {
-	public static List<ServiceInfoUIResponse> map(
-			List<GetServiceInfoResponse> getServiceInfoResponses) {
+	public static ServiceInfoUIResponse map(
+			GetServiceInfoResponse getServiceInfoResponses) {
 
-		List<ServiceInfoUIResponse> latestNewsList = getServiceInfoResponses
-				.stream()
-				.map(serviceInfo -> new ServiceInfoUIResponse(serviceInfo
-						.getServiceName(), serviceInfo.getStatus()))
-				.collect(Collectors.toList());
-		return latestNewsList;
+		ServiceInfoUIResponse serviceInfoUiResponse = new ServiceInfoUIResponse(getServiceInfoResponses.getCategories());
+		return serviceInfoUiResponse;
 	}
 }

@@ -3,8 +3,6 @@
  */
 package com.ui.getservices.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,8 +24,8 @@ public class GetServicesImpl {
 	 * @param serviceType
 	 * @return
 	 */
-	public List<ServiceInfoUIResponse> getServiceInfo(String tenentId) {
-		List<GetServiceInfoResponse> getServiceInfoResponses = servicesAPIProxy
+	public ServiceInfoUIResponse getServiceInfo(String tenentId) {
+		GetServiceInfoResponse getServiceInfoResponses = servicesAPIProxy
 				.getServiceInfo(tenentId);
 
 		return GetServiceInfoUIResponseMapper.map(getServiceInfoResponses);
